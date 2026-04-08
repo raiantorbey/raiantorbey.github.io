@@ -86,7 +86,13 @@ nav {
 .section--light { background: var(--c-ghost); color: var(--c-text-dark); }
 .section--accent { background: var(--c-neon); color: var(--c-void); }
 .section-inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 140px 60px 100px; }
-
+.profile-img {
+  max-width: 100%;      /* Don't exceed the column width */
+  max-height: 100%;     /* Stay inside the placeholder height */
+  object-fit: cover;    /* Maintain aspect ratio and crop if needed */
+  display: block;       /* Remove inline spacing issues */
+  border: 1px solid rgba(0,255,204,0.2);
+}
 .grid-bg {
   position: absolute; inset: 0;
   background-image: linear-gradient(var(--c-grid) 1px, transparent 1px), linear-gradient(90deg, var(--c-grid) 1px, transparent 1px);
